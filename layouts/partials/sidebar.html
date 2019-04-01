@@ -27,10 +27,10 @@
 
     <!-- Short About -->
     <section class="visible-md visible-lg">
-	<hr><h5><a href="{{ "/top/about" | relLangURL }}">ABOUT ME</a></h5>
+	<hr><h5><a href="{{ "/about/desc" | relLangURL }}">ABOUT ME</a></h5>
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
-            <a href="{{ "/top/about" | relLangURL }}">
+            <a href="{{ "/about/desc" | relLangURL }}">
                <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
             </a>
             {{ end }}
@@ -139,7 +139,7 @@
         <h5>FRIENDS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.friend_link }}
-            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
@@ -152,7 +152,7 @@
         <h5>BOOKMARKS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.bookmark_link }}
-            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
